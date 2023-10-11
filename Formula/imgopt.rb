@@ -3,7 +3,7 @@ class Imgopt < Formula
   homepage "https://github.com/kaleidpixel/imgopt"
   url "https://github.com/kaleidpixel/imgopt/releases/download/latest/imgopt.phar"
   version "latest"
-  sha256 "70DE3596533BD479AB835069CF70FF9B41C80E451EABE63EA89116E0CDF9ED2E"
+  sha256 "AB6D4370CA291026E307226EAF541C3614FEF85BECD54EEB4D1B4969415963CC"
 
   def install
     bin.install "imgopt.phar" => "imgopt"
