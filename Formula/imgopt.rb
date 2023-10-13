@@ -2,7 +2,7 @@ class Imgopt < Formula
   desc "Command-line interface for kaleidpixel/image-optimizer"
   homepage "https://github.com/kaleidpixel/imgopt"
   url "https://github.com/kaleidpixel/imgopt/releases/download/v0.3.2/imgopt.phar"
-  sha256 "ebce8a68e0cc62639f5c6de25a0b30a05b90f44cb8bd2b508b3631b86bbfe5bd"
+  sha256 "e010e672d78e5b422579003969717c1917dde91aed3160c62d41bd81c0eb5587"
 
   def install
     bin.install "imgopt.phar" => "imgopt"
