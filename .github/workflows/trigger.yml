@@ -33,6 +33,9 @@ jobs:
           SHA256=$(curl -sL ${{ env.GITHUB_REPOSITORY_URL }}/releases/download/${{ env.VERSION }}/${{ env.PACKAGE_NAME }}-x64-win.zip.sha256)
           echo "SHA256=$SHA256" >> $GITHUB_ENV
 
+      - name: cat ${{ env.FORMULA_RUBY }}
+        run: cat ${{ env.FORMULA_RUBY }}
+
       - name: Update ${{ env.FORMULA_RUBY }}
         run: |
           sed -i "s|${{ env.GITHUB_REPOSITORY_URL }}/releases/download/v[0-9.]+/${{ env.PACKAGE_NAME }}.phar|${{ env.GITHUB_REPOSITORY_URL }}/releases/download/${{ env.VERSION }}/${{ env.PACKAGE_NAME }}.phar|g" ${{ env.FORMULA_RUBY }}
