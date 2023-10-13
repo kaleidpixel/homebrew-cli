@@ -42,6 +42,6 @@ jobs:
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add ${{ env.BUCKET_JSON }}
-          git commit -m "Update imgopt.json with new version ${{ env.VERSION }}" || echo "No changes to commit"
+          git add ${{ env.FORMULA_RUBY }}
+          git commit -m "Update ${{ env.FORMULA_RUBY }} with new version ${{ env.VERSION }}" || echo "No changes to commit"
           git push
