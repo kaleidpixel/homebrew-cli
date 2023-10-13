@@ -36,7 +36,7 @@ jobs:
       - name: Update ${{ env.FORMULA_RUBY }}
         run: |
           sed -i "s|${{ env.GITHUB_REPOSITORY_URL }}/releases/download/v[0-9.]+/${{ env.PACKAGE_NAME }}.phar|${{ env.GITHUB_REPOSITORY_URL }}/releases/download/${{ env.VERSION }}/${{ env.PACKAGE_NAME }}.phar|g" ${{ env.FORMULA_RUBY }}
-          sed -i "s|sha256 \".+\"|sha256 \"${{ env.SHA256 }}\"|g" ${{ env.FORMULA_RUBY }}
+          sed -i "s|sha256 \"[0-9A-Za-z]+\"|sha256 \"${{ env.SHA256 }}\"|g" ${{ env.FORMULA_RUBY }}
 
       - name: Commit and push if changed
         run: |
